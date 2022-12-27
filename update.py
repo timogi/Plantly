@@ -67,8 +67,8 @@ def get_config(BEE_HOME_ENDPOINT, BEE_HOME_TOKEN):
     headers = get_headers(BEE_HOME_TOKEN)
     config_response = requests.get(url=BEE_HOME_ENDPOINT, headers=headers)
     # validate response
-    if config_response.status_code  != 200:
-        raise requests.ConnectionError("Expected status code 200, but got" + str(config_response.status_code))
+    if config_response.status_code  > 400:
+        raise requests.ConnectionError("Expected status code <400, but got " + str(config_response.status_code))
     return config_response.json()
 
 def post_data(BEE_HOME_ENDPOINT, BEE_HOME_TOKEN, data):
@@ -77,8 +77,8 @@ def post_data(BEE_HOME_ENDPOINT, BEE_HOME_TOKEN, data):
     """
     headers = get_headers(BEE_HOME_TOKEN)
     data_post = requests.post(url=BEE_HOME_ENDPOINT, json=data, headers=headers)
-    if data_post.status_code != 200:
-        raise requests.ConnectionError("Expected status code 200, but got" + str(data_post.status_code))
+    if data_post.status_code > 400:
+        raise requests.ConnectionError("Expected status code <400, but got" + str(data_post.status_code))
     return data_post.json()
 
 

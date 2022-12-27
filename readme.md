@@ -3,7 +3,7 @@
 ## clone this repository
 
 ```bash
-git clone
+git clone git@github.com:timogi/Plantly.git
 ```
 
 ## install dependencies
