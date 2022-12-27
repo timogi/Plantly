@@ -20,6 +20,13 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
+## add the .env file containing the following variables
+
+```bash
+BEE_HOME_TOKEN = [your token]
+BEE_HOME_ENDPOINT = [your endpoint]
+```
+
 ## create the cron job
 
 make code 

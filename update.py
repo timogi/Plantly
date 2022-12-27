@@ -83,7 +83,7 @@ def post_data(BEE_HOME_ENDPOINT, BEE_HOME_TOKEN, data):
 
 
 
-def __main__():
+if __name__ == "__main__":
     # do not log logging.info
     logging.getLogger().setLevel(logging.ERROR)
     # load environment variables
