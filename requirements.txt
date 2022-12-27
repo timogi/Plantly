@@ -1,0 +1,10 @@
+btlewrap==0.0.8
+certifi==2022.5.18
+chardet==4.0.0
+idna==2.10
+miflora==0.6
+pkg-resources==0.0.0
+python-dotenv==0.20.0
+requests==2.25.1
+typing==3.7.4.3
+urllib3==1.26.9
