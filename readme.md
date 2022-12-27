@@ -12,15 +12,13 @@ git clone
 pip3 install -r requirements.txt
 ```
 
-### you may use a virtual environment
+hint: if you are using a virtual environment, you can create one with
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
 ```
-
-(make sure to adjust the cron job below)
 
 ## create the cron job
 
@@ -29,14 +27,14 @@ make code
 crontab -e
 ```
 
-add this line
+add this line if you are using a global python environment
 
 
 ```bash
 0 * * * * python3 [path/to/directory]/update.py >> [path/to/directory]/update.log 2>&1
 ```
 
-cronjob for the virtual environment
+add this line if you are using a virtual environment
 
 ```bash
 0 * * * * source [path/to/directory]/venv/bin/activate && python3 [path/to/directory]/update.py >> [path/to/directory]/update.log 2>&1
