@@ -32,7 +32,7 @@ def get_sensor_data(mac, uuid):
     data["timestamp"] = 1
     return data
 
-def poll(mac, uuid, log_file):
+def poll(mac, uuid):
     """
     Polls the sensor and returns a dictionary with the sensor data
     """
