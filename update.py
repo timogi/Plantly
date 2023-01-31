@@ -80,7 +80,6 @@ def post_data(BEE_HOME_ENDPOINT, BEE_HOME_TOKEN, data):
     data_post = requests.post(url=BEE_HOME_ENDPOINT, json=data, headers=headers)
     if data_post.status_code >= 400:
         raise requests.ConnectionError("Expected status code <400, but got" + str(data_post.status_code))
-    return data_post.json()
 
 
 
